@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>AdmiHilda</title>
+    <link rel="stylesheet" href="styles.css">
+    
+    <style>
+        /* Estilos globales */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+/* Contenedor principal */
+.container {
+    width: 80%;
+    margin: 0 auto;
+    max-width: 1200px;
+}
+
+/* Encabezado */
+header {
+    background-color: #333;
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+}
+
+header h1 {
+    margin-bottom: 10px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #f4f4f4;
+    text-decoration: underline;
+}
+
+/* Sección de Inicio - Color distintivo: Verde claro */
+#inicio {
+    background-color: #a8dadc;
+    color: #333;
+}
+
+#inicio h2 {
+    color: #1d3557;
+}
+
+#inicio p {
+    color: #457b9d;
+    font-size: 1.2rem;
+    text-align: center;
+}
+
+/* Sección de Biografía - Color distintivo: Azul claro */
+#biografia {
+    background-color: #457b9d;
+    color: white;
+}
+
+#biografia h2 {
+    color: #f1faee;
+}
+
+#biografia p {
+    color: #a8dadc;
+    font-size: 1.1rem;
+    text-align: center;
+}
+
+/* Sección de Habilidades - Color distintivo: Amarillo claro */
+#habilidades {
+    background-color: #ffdd57;
+    color: #333;
+}
+
+#habilidades h2 {
+    color: #2b2d42;
+}
+
+#habilidades ul {
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+    padding: 0;
+}
+
+#habilidades ul li {
+    background-color: #f4f4f4;
+    border: 1px solid #ccc;
+    padding: 10px 20px;
+    border-radius: 5px;
+    box-shadow: 2px 2px 5px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+#habilidades ul li:hover {
+    transform: scale(1.05);
+    box-shadow: 4px 4px 10px rgba(0,0,0,0.2);
+}
+
+/* Sección de Proyectos - Color distintivo: Rojo claro */
+#proyectos {
+    background-color: #f94144;
+    color: white;
+}
+
+#proyectos h2 {
+    color: #f4f4f4;
+}
+
+#proyectos p {
+    font-size: 1.1rem;
+    color: #fcd5ce;
+    text-align: center;
+}
+
+/* Sección de Contacto - Color distintivo: Púrpura */
+#contacto {
+    background-color: #6a4c93;
+    color: white;
+}
+
+#contacto h2 {
+    color: #f1faee;
+}
+
+#contacto form {
+    text-align: center;
+    padding: 20px 0;
+}
+
+#contacto input, #contacto textarea {
+    padding: 10px;
+    margin: 10px 0;
+    width: 60%;
+    max-width: 500px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+#contacto input[type="submit"] {
+    background-color: #333;
+    color: white;
+    cursor: pointer;
+    border: none;
+    transition: background-color 0.3s ease;
+}
+
+#contacto input[type="submit"]:hover {
+    background-color: #555;
+}
+
+/* Pie de página */
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+}
+
+footer p {
+    margin: 0;
+    font-size: 0.9rem;
+}
+
+
+      
+
+        /* Estilos globales */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+
+        /* Contenedor principal */
+        .container {
+            width: 80%;
+            margin: 0 auto;
+            max-width: 1200px;
+        }
+
+        /* Encabezado */
+        header {
+            background-color: #333;
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+        }
+
+        header h1 {
+            margin-bottom: 10px;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+        }
+
+        nav ul li {
+            margin: 0 15px;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        nav ul li a:hover {
+            text-decoration: underline;
+        }
+
+        /* Secciones */
+        .section {
+            padding: 40px 0;
+        }
+
+        .section:nth-of-type(even) {
+            background-color: #e2e2e2;
+        }
+
+        .section h2 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .biografia p, .proyectos p, .contacto p {
+            text-align: center;
+            width: 70%;
+            margin: 0 auto;
+            padding-bottom: 20px;
+        }
+
+        /* Habilidades */
+        .habilidades ul {
+            list-style: none;
+            display: flex;
+            justify-content: space-around;
+            padding: 0;
+        }
+
+        .habilidades ul li {
+            background-color: #f4f4f4;
+            border: 1px solid #ccc;
+            padding: 10px 20px;
+            border-radius: 5px;
+            box-shadow: 2px 2px 5px rgba(0,0,0,0.1);
+        }
+
+        /* Contacto */
+        .contacto form {
+            text-align: center;
+        }
+
+        .contacto input, .contacto textarea {
+            padding: 10px;
+            margin: 10px 0;
+            width: 60%;
+            max-width: 500px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .contacto input[type="submit"] {
+            background-color: #333;
+            color: white;
+            cursor: pointer;
+            border: none;
+            transition: background-color 0.3s ease;
+        }
+
+        .contacto input[type="submit"]:hover {
+            background-color: #555;
+        }
+
+        /* Pie de página */
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+        }
+
+        footer p {
+            margin: 0;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Encabezado y Navegación -->
+    <header>
+        <div class="container">
+            <h1>Mi Página Personal</h1>
+            <nav>
+                <ul>
+                    <li><a href="#inicio">Inicio</a></li>
+                    <li><a href="#biografia">Biografía</a></li>
+                    <li><a href="#habilidades">Habilidades</a></li>
+                    <li><a href="#proyectos">Proyectos</a></li>
+                    <li><a href="#contacto">Contacto</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Sección de Inicio -->
+    <section id="inicio" class="section">
+        <div class="container">
+            <h2>Inicio</h2>
+            <p>¡Hola! Soy [Tu Nombre], desarrollador web apasionado por crear experiencias digitales atractivas. Bienvenido a mi página personal.</p>
+        </div>
+    </section>
+
+    <!-- Sección de Biografía -->
+    <section id="biografia" class="section biografia">
+        <div class="container">
+            <h2>Biografía</h2>
+            <p>Soy un profesional con [número de años] años de experiencia en desarrollo web, especializado en HTML, CSS, JavaScript y frameworks modernos. Mi pasión por la tecnología me ha llevado a trabajar en varios proyectos innovadores.</p>
+        </div>
+    </section>
+
+    <!-- Sección de Habilidades -->
+    <section id="habilidades" class="section habilidades">
+        <div class="container">
+            <h2>Habilidades</h2>
+            <ul>
+                <li>HTML & CSS</li>
+                <li>JavaScript</li>
+                <li>React & Angular</li>
+                <li>Node.js</li>
+                <li>Diseño UX/UI</li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- Sección de Proyectos -->
+    <section id="proyectos" class="section proyectos">
+        <div class="container">
+            <h2>Proyectos</h2>
+            <p>Aquí puedes encontrar algunos de mis proyectos destacados. He trabajado en aplicaciones web interactivas, sitios responsivos y plataformas e-commerce.</p>
+        </div>
+    </section>
+
+    <!-- Sección de Contacto -->
+    <section id="contacto" class="section contacto">
+        <div class="container">
+            <h2>Contacto</h2>
+            <form action="#" method="POST">
+                <input type="text" name="nombre" placeholder="Tu Nombre" required><br>
+                <input type="email" name="email" placeholder="Tu Email" required><br>
+                <textarea name="mensaje" rows="5" placeholder="Tu Mensaje" required></textarea><br>
+                <input type="submit" value="Enviar">
+            </form>
+        </div>
+    </section>
+
+    <!-- Pie de página -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Mi Página Personal | Desarrollado por [Tu Nombre]</p>
+        </div>
+    </footer>
+
+</body>
+</html>
